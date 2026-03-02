@@ -34,3 +34,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# ML model artifacts (regenerated on Render via train.py build step)
+*.pkl
+*.joblib
+
+# Python env
+.env
