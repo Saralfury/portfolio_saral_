@@ -78,7 +78,7 @@ export default function RouterTerminal() {
             setLogs((prev) => [entry, ...prev].slice(0, 10));
             setTotalSavings((prev) => prev + saved);
             setLastResult(entry);
-        } catch (e) {
+        } catch {
             setError(
                 "Connection refused. Start the backend: cd semantic-router && uvicorn main:app --port 8001"
             );
@@ -92,7 +92,7 @@ export default function RouterTerminal() {
             {/* ── Terminal Title Bar ──────────────────────────────────────── */}
             <div className="border-b-4 border-white px-8 py-4 flex items-center justify-between">
                 <span className="text-xs font-black uppercase tracking-widest text-white">
-          // SMART_BUDGET_ROUTER :: UNIT_ECONOMICS_BENCH
+                    SMART BUDGET ROUTER :: UNIT ECONOMICS BENCH
                 </span>
                 <span className="text-xs text-gray-500 uppercase tracking-widest">
                     API → localhost:8001
@@ -114,7 +114,7 @@ export default function RouterTerminal() {
                 {/* LEFT: Controls ─────────────────────────────────────────── */}
                 <div className="border-b-4 md:border-b-0 md:border-r-4 border-white p-8 flex flex-col gap-6">
                     <p className="text-xs font-black uppercase tracking-widest text-gray-500 border-b border-gray-700 pb-4">
-            // QUERY_CONTROLS
+                        QUERY CONTROLS
                     </p>
 
                     {/* Button 1: Simple */}
@@ -180,7 +180,7 @@ export default function RouterTerminal() {
                 {/* RIGHT: Unit Economics Dashboard ───────────────────────── */}
                 <div className="p-8 flex flex-col gap-6">
                     <p className="text-xs font-black uppercase tracking-widest text-gray-500 border-b border-gray-700 pb-4">
-            // UNIT_ECONOMICS_DASHBOARD
+                        UNIT ECONOMICS DASHBOARD
                     </p>
 
                     {lastResult ? (

@@ -78,7 +78,7 @@ export default function AiHealthMonitor() {
             {/* ── Title Bar ──────────────────────────────────────────────────────── */}
             <div className="border-b-4 border-white px-8 py-4 flex items-center justify-between">
                 <span className="text-xs font-black uppercase tracking-widest">
-          // AI_HEALTH_MONITOR :: AUTOMATED_SAFETY_ENGINE
+                    {/* AI_HEALTH_MONITOR :: AUTOMATED_SAFETY_ENGINE */}
                 </span>
                 <span className="text-xs text-gray-500 uppercase tracking-widest">
                     API → localhost:8002
@@ -97,7 +97,7 @@ export default function AiHealthMonitor() {
                 {/* ── CONTROLS ──────────────────────────────────────────────────────── */}
                 <div>
                     <p className="text-xs font-black uppercase tracking-widest text-gray-500 border-b border-gray-700 pb-4 mb-6">
-            // THE_CONTROLS
+                        THE CONTROLS
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {/* Button 1: Normal Data */}
@@ -134,7 +134,7 @@ export default function AiHealthMonitor() {
                 {status !== "IDLE" && (
                     <div>
                         <p className="text-xs font-black uppercase tracking-widest text-gray-500 border-b border-gray-700 pb-4 mb-6">
-              // AUTOMATION_TRACKER
+                            AUTOMATION TRACKER
                         </p>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                             {PIPELINE_STEPS.map((step) => {
@@ -171,7 +171,7 @@ export default function AiHealthMonitor() {
                 {result && (
                     <div>
                         <p className="text-xs font-black uppercase tracking-widest text-gray-500 border-b border-gray-700 pb-4 mb-6">
-              // SYSTEM_LOG
+                            SYSTEM LOG
                         </p>
 
                         {isHealthy && (

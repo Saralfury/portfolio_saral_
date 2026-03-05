@@ -119,7 +119,7 @@ export default function RiskEngineTerminal() {
 
     // ── Core fetch logic ────────────────────────────────────────────────────────
     const fireRequest = useCallback(
-        async (key: string, forceTimeout: boolean, mode: "new" | "retry" | "force") => {
+        async (key: string, forceTimeout: boolean) => {
             if (loading) return;
             setLoading(true);
             setMetrics((prev) => ({ ...prev, state: "loading", decision: "SCORING…", circuitBreaker: prev.circuitBreaker }));
@@ -191,18 +191,18 @@ export default function RiskEngineTerminal() {
     const handleStandard = () => {
         const key = generateUUID();
         setLastKey(key);
-        fireRequest(key, false, "new");
+        fireRequest(key, false);
     };
 
     const handleRetry = () => {
         if (!lastKey) return handleStandard();
-        fireRequest(lastKey, false, "retry");
+        fireRequest(lastKey, false);
     };
 
     const handleForce = () => {
         const key = generateUUID();
         setLastKey(key);
-        fireRequest(key, true, "force");
+        fireRequest(key, true);
     };
 
     // ── Derived accent colors for metric blocks ─────────────────────────────────
@@ -243,7 +243,7 @@ export default function RiskEngineTerminal() {
             <div className="bg-black text-white px-4 py-3 flex items-center justify-between flex-wrap gap-2">
                 <div>
                     <span className="font-mono text-sm font-black uppercase tracking-widest">
-            // RECRUITER_TEST_BENCH — RISK_ENGINE v1.0
+                        RECRUITER TEST BENCH — RISK ENGINE v1.0
                     </span>
                     <span className="font-mono text-xs text-gray-400 ml-3">
                         PORT :8000 | SLA :150ms | TTL :60s
@@ -270,7 +270,7 @@ export default function RiskEngineTerminal() {
                 {/* ── COLUMN 1: CONTROLS ── */}
                 <div className="p-5">
                     <p className="font-mono text-xs font-black uppercase tracking-widest border-b-2 border-black pb-2 mb-4">
-            // CONTROLS
+                        CONTROLS
                     </p>
                     <div className="flex flex-col gap-3">
                         <ControlButton
@@ -313,7 +313,7 @@ export default function RiskEngineTerminal() {
                 {/* ── COLUMN 2: SYSTEM METRICS ── */}
                 <div className="p-5">
                     <p className="font-mono text-xs font-black uppercase tracking-widest border-b-2 border-black pb-2 mb-4">
-            // SYSTEM_METRICS
+                        SYSTEM METRICS
                     </p>
 
                     <div className="grid grid-cols-1 gap-3">

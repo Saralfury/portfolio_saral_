@@ -100,7 +100,7 @@ export default function ProjectMonolith({
                                 {showSourceCode && (
                                     <div className="mt-4">
                                         <p className="font-mono text-xs font-black uppercase tracking-widest text-gray-500 mb-2">
-                      // ARCHITECTURE_SNIPPET — risk-engine/main.py
+                                                                  ARCHITECTURE SNIPPET
                                         </p>
                                         <pre className="bg-black text-green-400 p-6 font-mono text-xs overflow-x-auto border-2 border-black leading-relaxed">
                                             <code>{sourceCode}</code>
