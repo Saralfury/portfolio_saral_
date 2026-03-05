@@ -5,35 +5,35 @@ services:
   # ── Project 1: Real-Time Fraud & Risk Engine ────────────────────────────────
   - type: web
     name: risk-engine
-    runtime: python
+    env: python
     rootDir: risk-engine
     buildCommand: pip install -r requirements.txt && python train.py
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
-        value: "3.12"
+        value: "3.11"
     plan: free
 
   # ── Project 2: Smart-Budget Semantic Router ─────────────────────────────────
   - type: web
     name: semantic-router
-    runtime: python
+    env: python
     rootDir: semantic-router
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
-        value: "3.12"
+        value: "3.11"
     plan: free
 
   # ── Project 3: AI Health Monitor ─────────────────────────────────────────────
   - type: web
     name: ai-health-monitor
-    runtime: python
+    env: python
     rootDir: ai-health-monitor
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
-        value: "3.12"
+        value: "3.11"
     plan: free

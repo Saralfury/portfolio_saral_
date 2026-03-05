@@ -1,5 +1,6 @@
-fastapi
-uvicorn
-pydantic
-cachetools
-scikit-learn
+fastapi==0.110.0
+uvicorn==0.29.0
+pydantic==2.6.4
+cachetools==5.3.3
+scikit-learn==1.4.2
+numpy==1.26.4
