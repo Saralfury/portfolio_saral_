@@ -21,7 +21,7 @@ const PIPELINE_STEPS = [
     { id: 4, label: "SAFETY CHECK" },
 ];
 
-const API_URL = `${process.env.NEXT_PUBLIC_HEALTH_MONITOR_URL ?? "http://localhost:8002"}/v1/system-check`;
+const API_URL = `/api/system-check`;
 
 // ── Component ─────────────────────────────────────────────────────────────────
 export default function AiHealthMonitor() {

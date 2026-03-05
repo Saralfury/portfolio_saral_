@@ -127,8 +127,7 @@ export default function RiskEngineTerminal() {
             const t0 = performance.now();
 
             try {
-                const API_BASE = process.env.NEXT_PUBLIC_RISK_ENGINE_URL ?? "http://localhost:8000";
-                const res = await fetch(`${API_BASE}/v1/score`, {
+                const res = await fetch(`/api/score`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",

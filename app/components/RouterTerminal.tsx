@@ -19,7 +19,7 @@ interface LogEntry extends RouteResult {
 
 // ── Constants ─────────────────────────────────────────────────────────────────
 const CLOUD_COST = 0.015;
-const API_URL = `${process.env.NEXT_PUBLIC_ROUTER_URL ?? "http://localhost:8001"}/v1/route`;
+const API_URL = `/api/route`;
 
 const SIMPLE_QUERY = "What are your hours?";
 const COMPLEX_QUERY =
